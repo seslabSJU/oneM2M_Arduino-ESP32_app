@@ -11,9 +11,10 @@
 
 ## Prepartion
 
-1. Arduino IDE(at least 1.8.x over) install  
-2. [ESP32 board package](https://github.com/espressif/arduino-esp32) add
-3. clone this project or download
+1. Arduino IDE(at least 1.8.x over) install
+2. In Arduino IDE, top menu -> file -> preference -> additional board manager select
+3. enter URL (https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json)
+4. clone this project or download
 
 ## How to execute
 
