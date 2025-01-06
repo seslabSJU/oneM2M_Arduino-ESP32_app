@@ -34,4 +34,4 @@
 
 ## Circuit Configuration
 -The picture below is an example of a circuit configuration in esp32
-![ESP32 circuit example](./images/esp32 circuit example.png)
+![ESP32 circuit example]<./images/esp32 circuit example.png>
