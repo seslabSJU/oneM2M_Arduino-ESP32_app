@@ -14,10 +14,10 @@
 
 WiFiClient wifi; //WiFiclient 선언 
 
-const char* ssid = "Ultra";         // WiFi SSID
-const char* password = "10248192"; // WiFi 비밀번호
+const char* ssid = "Your_SSID";         // WiFi SSID
+const char* password = "your_PassWord"; // WiFi 비밀번호
 
-const char* server = "192.168.246.76"; // PC의 로컬 IP 주소
+const char* server = "Server Hosting PC(pr laptop) IPv4 Address"; // server가 돌아가고 있는 PC의 로컬 IP 주소
 const int port = 3000;            // tinyIoT 서버 포트
 
 bool pirState = false;  // PIR 센서 상태 (HIGH/LOW)
