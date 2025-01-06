@@ -6,8 +6,8 @@
 ## Overview
 - **Key Feature**: Sensor data collection, data transmission between oneM2M TinyIoT server 
 - **Used Board**: ESP32 (ESP32 Dev Module(Chip: ESP-WROOM-32))
-- ![ESP32 circuit example]<img src="./images/esp32 dev module image.jpg">
-- ![ESP32 circuit example]<img src="./images/esp32 pin map image.jpeg">
+- [ESP32 dev module image example]<img src="./images/esp32 dev module image.jpg">
+- [ESP32 dev module pin map image example]<img src="./images/esp32 pin map image.jpeg">
 - **Development Environment**: Arduino IDE
 
 ## Prepartion
@@ -36,4 +36,4 @@
 
 ## Circuit Configuration
 -The picture below is an example of a circuit configuration in esp32
-![ESP32 circuit example]<img src="./images/esp32 circuit example.png">
+[ESP32 circuit example]<img src="./images/esp32 circuit example.png">
