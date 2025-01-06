@@ -20,7 +20,7 @@
 1. In Arduino IDE by `File > Open`, open `TinyIoT_Demo_esp32/TinyIoT_Demo_esp32.ino` 
 2. **Tools > Board** select `ESP32 Dev Module`  
 3. **Tools > Port** select USB port  
-4. click upload button(if can't upload with error code, please press 'boot' button on your ESP32 board)
+4. After refactoring it by referring to the network configuration section below then click upload button(if can't upload with error code, please press 'boot' button on your ESP32 board)
 
 ## Code Configurations
 - **Network Configuration**: Attempt to connect wifi according to the WiFi SSID, Password entered
@@ -37,3 +37,16 @@
 ## Circuit Configuration
 -The picture below is an example of a circuit configuration in esp32
 [ESP32 circuit example]<img src="./images/esp32 circuit example.png">
+
+## Network Configuration
+**Some settings are required for the network**
+1. Add Inbound Rule for Port 3000 in Firewall(by "New-NetFirewallRule -DisplayName "Allow Port 3000" -Direction Inbound -LocalPort 3000 -Protocol TCP -Action Allow" in PowerShell)
+2. Setting the Port Proxy Using the netsh Command(by "netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=3000 connectaddress=<WSL_interface_IP> connectport=3000" in PowerShell)
+   -Here, wsl_interface_ip corresponds to the ip of the square in the picture below
+   -[wsl ip addr example image]
+3. In Arduino IDE, before execute you need to set wifi ssid, password, server_ip addresss
+   - ssid and password correspond to the hotspot or iptime router Wi-Fi network you want to connect to
+   - The server ip corresponds to the windows host ip on the pc (or laptop) where the server is running(verify by ipconfig in PowerShell)
+   - [Arduino code section that you may modify]
+   - [windows powershell ipconfig example image]
+
