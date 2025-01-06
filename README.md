@@ -43,10 +43,10 @@
 1. Add Inbound Rule for Port 3000 in Firewall(by "New-NetFirewallRule -DisplayName "Allow Port 3000" -Direction Inbound -LocalPort 3000 -Protocol TCP -Action Allow" in PowerShell)
 2. Setting the Port Proxy Using the netsh Command(by "netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=3000 connectaddress=<WSL_interface_IP> connectport=3000" in PowerShell)
    -Here, wsl_interface_ip corresponds to the ip of the square in the picture below
-   -[wsl ip addr example image]
+   -[wsl ip addr example image]<img src="./images/wsl ip addr ex.png">
 3. In Arduino IDE, before execute you need to set wifi ssid, password, server_ip addresss
    - ssid and password correspond to the hotspot or iptime router Wi-Fi network you want to connect to
    - The server ip corresponds to the windows host ip on the pc (or laptop) where the server is running(verify by ipconfig in PowerShell)
-   - [Arduino code section that you may modify]
-   - [windows powershell ipconfig example image]
+   - [Arduino code section that you may modify]<img src="./images/arduino ide modifying section.png">
+   - [windows powershell ipconfig example image]<img src="./images/powershell ipconfig ex.png">
 
