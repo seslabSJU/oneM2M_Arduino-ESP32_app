@@ -96,15 +96,6 @@ void setup() {
     delay(1000);
   }
 
-  for (int thisNote = 0; thisNote < 8; thisNote++) {//센서 초기화 알림음 
-    int noteDuration = 1000 / noteDurations[thisNote];
-    tone(BUZ_PIN, melody[thisNote], noteDuration);
-
-    int pauseBetweenNotes = noteDuration * 1.30;
-    delay(pauseBetweenNotes);
-    noTone(BUZ_PIN);
-  }
-
   digitalWrite(LED_PIN, LOW);//LED는 기본으로 LOW 처리 
   Serial.println("Sensors initialized.");
 
@@ -121,6 +112,16 @@ void setup() {
   printWifiStatus();
 
   setDevice();
+
+  for (int thisNote = 0; thisNote < 8; thisNote++) {//센서 초기화 알림음 
+    int noteDuration = 1000 / noteDurations[thisNote];
+    tone(BUZ_PIN, melody[thisNote], noteDuration);
+
+    int pauseBetweenNotes = noteDuration * 1.30;
+    delay(pauseBetweenNotes);
+    noTone(BUZ_PIN);
+  }
+  Serial.println("Device setting end.");
 
 }
 
