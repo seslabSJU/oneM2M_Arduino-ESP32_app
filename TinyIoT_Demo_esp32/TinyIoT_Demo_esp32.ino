@@ -113,7 +113,7 @@ void setup() {
 
   setDevice();
 
-  for (int thisNote = 0; thisNote < 8; thisNote++) {//센서 초기화 알림음 
+  for (int thisNote = 0; thisNote < 8; thisNote++) {//기기 설정 완료 알림음 
     int noteDuration = 1000 / noteDurations[thisNote];
     tone(BUZ_PIN, melody[thisNote], noteDuration);
 
