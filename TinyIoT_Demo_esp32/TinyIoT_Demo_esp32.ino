@@ -14,10 +14,10 @@
 
 WiFiClient wifi; //WiFiclient 선언 
 
-const char* ssid = "Your_SSID";         // WiFi SSID
+const char* ssid = "your_SSID";         // WiFi SSID
 const char* password = "your_PassWord"; // WiFi 비밀번호
 
-const char* server = "Server Hosting PC(pr laptop) IPv4 Address"; // server가 돌아가고 있는 PC의 로컬 IP 주소
+const char* server = "your_Host_IP(server runs on)"; // server가 돌아가고 있는 PC의 로컬 IP 주소
 const int port = 3000;            // tinyIoT 서버 포트
 
 bool pirState = false;  // PIR 센서 상태 (HIGH/LOW)
@@ -179,7 +179,7 @@ void setDevice(){
     delay(5000);
     if(state == 1){
       Serial.println(F("Successfully created AE\n"));
-      delay(100);
+      delay(1000);
       post("/TinyIoT/Arduino", "CNT", "pir_sensor", "") == 1 ? Serial.println(F("Successfully created pir_sensor CNT!\n")) : Serial.println(F("Failed to create pir_sensor CNT!\n"));
       delay(100);
       post("/TinyIoT/Arduino", "CNT", "led", "") == 1 ? Serial.println(F("Successfully created led CNT!\n")) : Serial.println(F("Failed to create led CNT!\n"));
@@ -193,7 +193,7 @@ void setDevice(){
   } else{
     Serial.println(F("Wifi not connected!"));
   }
-  delay(30000);
+  delay(10000);
 
   Serial.println(F("Setup completed!"));
 }
